@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PCalc/MainWindow.cs">
+    <Files>
+      <File FileName="PCalc/Main.cs" Line="8" Column="42" />
+      <File FileName="PCalc/MainWindow.cs" Line="21" Column="43" />
+      <File FileName="PCalc/AssemblyInfo.cs" Line="21" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
