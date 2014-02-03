@@ -20,7 +20,6 @@ public partial class MainWindow
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.vbox1 = new global::Gtk.VBox ();
-		this.vbox1.Name = "vbox1";
 		this.vbox1.Spacing = 6;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.entry1 = new global::Gtk.Entry ();
@@ -67,6 +66,7 @@ public partial class MainWindow
 		this.reset.Label = global::Mono.Unix.Catalog.GetString ("Reset");
 		this.hbox1.Add (this.reset);
 		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.reset]));
+		w4.PackType = ((global::Gtk.PackType)(1));
 		w4.Position = 0;
 		w4.Expand = false;
 		w4.Fill = false;
@@ -92,10 +92,10 @@ public partial class MainWindow
 			this.Child.ShowAll ();
 		}
 		this.DefaultWidth = 257;
-		this.DefaultHeight = 202;
+		this.DefaultHeight = 205;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
-		this.reset.Clicked += new global::System.EventHandler (this.OnResetClicked);
 		this.buttonSumar.Clicked += new global::System.EventHandler (this.OnButtonSumarClicked);
+		this.reset.Clicked += new global::System.EventHandler (this.OnResetClicked);
 	}
 }
