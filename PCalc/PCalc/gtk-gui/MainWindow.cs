@@ -9,6 +9,9 @@ public partial class MainWindow
 	private global::Gtk.Entry entryResult;
 	private global::Gtk.HBox hbox1;
 	private global::Gtk.Button reset;
+	private global::Gtk.Button buttonDividir;
+	private global::Gtk.Button buttonMultiplicar;
+	private global::Gtk.Button buttonRestar;
 	private global::Gtk.Button buttonSumar;
 	
 	protected virtual void Build ()
@@ -20,6 +23,7 @@ public partial class MainWindow
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.vbox1 = new global::Gtk.VBox ();
+		this.vbox1.Name = "vbox1";
 		this.vbox1.Spacing = 6;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.entry1 = new global::Gtk.Entry ();
@@ -66,10 +70,45 @@ public partial class MainWindow
 		this.reset.Label = global::Mono.Unix.Catalog.GetString ("Reset");
 		this.hbox1.Add (this.reset);
 		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.reset]));
-		w4.PackType = ((global::Gtk.PackType)(1));
-		w4.Position = 0;
+		w4.Position = 1;
 		w4.Expand = false;
 		w4.Fill = false;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.buttonDividir = new global::Gtk.Button ();
+		this.buttonDividir.CanFocus = true;
+		this.buttonDividir.Name = "buttonDividir";
+		this.buttonDividir.UseUnderline = true;
+		this.buttonDividir.Label = global::Mono.Unix.Catalog.GetString ("/");
+		this.hbox1.Add (this.buttonDividir);
+		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.buttonDividir]));
+		w5.PackType = ((global::Gtk.PackType)(1));
+		w5.Position = 2;
+		w5.Expand = false;
+		w5.Fill = false;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.buttonMultiplicar = new global::Gtk.Button ();
+		this.buttonMultiplicar.CanFocus = true;
+		this.buttonMultiplicar.Name = "buttonMultiplicar";
+		this.buttonMultiplicar.UseUnderline = true;
+		this.buttonMultiplicar.Label = global::Mono.Unix.Catalog.GetString ("*");
+		this.hbox1.Add (this.buttonMultiplicar);
+		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.buttonMultiplicar]));
+		w6.PackType = ((global::Gtk.PackType)(1));
+		w6.Position = 3;
+		w6.Expand = false;
+		w6.Fill = false;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.buttonRestar = new global::Gtk.Button ();
+		this.buttonRestar.CanFocus = true;
+		this.buttonRestar.Name = "buttonRestar";
+		this.buttonRestar.UseUnderline = true;
+		this.buttonRestar.Label = global::Mono.Unix.Catalog.GetString ("-");
+		this.hbox1.Add (this.buttonRestar);
+		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.buttonRestar]));
+		w7.PackType = ((global::Gtk.PackType)(1));
+		w7.Position = 4;
+		w7.Expand = false;
+		w7.Fill = false;
 		// Container child hbox1.Gtk.Box+BoxChild
 		this.buttonSumar = new global::Gtk.Button ();
 		this.buttonSumar.CanFocus = true;
@@ -77,25 +116,28 @@ public partial class MainWindow
 		this.buttonSumar.UseUnderline = true;
 		this.buttonSumar.Label = global::Mono.Unix.Catalog.GetString ("+");
 		this.hbox1.Add (this.buttonSumar);
-		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.buttonSumar]));
-		w5.PackType = ((global::Gtk.PackType)(1));
-		w5.Position = 1;
-		w5.Expand = false;
-		w5.Fill = false;
+		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.buttonSumar]));
+		w8.PackType = ((global::Gtk.PackType)(1));
+		w8.Position = 5;
+		w8.Expand = false;
+		w8.Fill = false;
 		this.vbox1.Add (this.hbox1);
-		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
-		w6.Position = 3;
-		w6.Expand = false;
-		w6.Fill = false;
+		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
+		w9.Position = 3;
+		w9.Expand = false;
+		w9.Fill = false;
 		this.Add (this.vbox1);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 257;
+		this.DefaultWidth = 229;
 		this.DefaultHeight = 205;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
-		this.buttonSumar.Clicked += new global::System.EventHandler (this.OnButtonSumarClicked);
 		this.reset.Clicked += new global::System.EventHandler (this.OnResetClicked);
+		this.buttonSumar.Clicked += new global::System.EventHandler (this.OnButtonSumarClicked);
+		this.buttonRestar.Clicked += new global::System.EventHandler (this.OnRestarClicked);
+		this.buttonMultiplicar.Clicked += new global::System.EventHandler (this.OnMultiplicarClicked);
+		this.buttonDividir.Clicked += new global::System.EventHandler (this.OnDividirClicked);
 	}
 }

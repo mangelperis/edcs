@@ -43,4 +43,66 @@ public partial class MainWindow: Gtk.Window
 		string empty = "";
 		entry1.Text = entry2.Text = entryResult.Text = empty;
 	}
+
+	protected void OnRestarClicked (object sender, System.EventArgs e)
+	{
+		try{
+						
+			decimal d1 = decimal.Parse(entry1.Text.Replace('.',','));
+			decimal d2 = decimal.Parse(entry2.Text.Replace('.',','));
+		
+			
+			
+			decimal result = d1 - d2;
+					
+			entryResult.Text = result.ToString();
+			
+		}
+		catch( System.FormatException ){
+			entryResult.Text = "ERROR :: No has introducido números ";
+		}
+		
+		
+		
+	}
+
+	protected void OnMultiplicarClicked (object sender, System.EventArgs e)
+	{
+		try{
+						
+			decimal d1 = decimal.Parse(entry1.Text.Replace('.',','));
+			decimal d2 = decimal.Parse(entry2.Text.Replace('.',','));
+		
+			
+			
+			decimal result = d1 * d2;
+					
+			entryResult.Text = result.ToString();
+			
+		}
+		catch( System.FormatException ){
+			entryResult.Text = "ERROR :: No has introducido números ";
+		}
+		
+		
+	}
+
+	protected void OnDividirClicked (object sender, System.EventArgs e)
+	{
+		try{
+						
+			decimal d1 = decimal.Parse(entry1.Text.Replace('.',','));
+			decimal d2 = decimal.Parse(entry2.Text.Replace('.',','));
+		
+			
+			
+			decimal result = d1 / d2;
+					
+			entryResult.Text = result.ToString();
+			
+		}
+		catch( System.FormatException ){
+			entryResult.Text = "ERROR :: No has introducido números ";
+		}
+	}
 }
